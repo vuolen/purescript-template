@@ -1,0 +1,20 @@
+{
+  "name": "template-project",
+  "version": "1.0.0",
+  "description": "Placeholder description",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npx spago install",
+    "dev": "DEV=true node esbuild.js & npx spago build --watch",
+    "build": "npx spago build --purs-args '-o ./build/purescript' && cp -r ./src/dist ./build/dist && node esbuild.js",
+    "test": "npx spago test"
+  },
+  "author": "Lennu Vuolanne",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "esbuild": "^0.13.4",
+    "esbuild-plugin-purescript": "^1.1.1",
+    "purescript": "^0.14.4",
+    "spago": "^0.20.3"
+  }
+}
